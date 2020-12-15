@@ -1,4 +1,4 @@
-Check this effect for move photos on a gallery.
+Check this effect for moving photos on a gallery.
 
 Cool and smooth effect ready for use in your web site galleries.
 
