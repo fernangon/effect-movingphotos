@@ -1,0 +1,126 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.container {
+    display: flex;
+
+    width: 1000px;
+    height: 400px;
+
+    margin: 120px auto;
+
+    background: #ccc;
+}
+
+.container .col {
+    /*  shorthand:
+        flex: flex-grow (obligatiorio) | flex-shrink (opcional) | flex-basis (opcional);
+
+        si los dos parámetros opcionales no se ponen, serán respectivamente: 1 auto. 
+    */
+    /*  flex-grow: 1; a parte de la tuya, del espacio sobrante para repartir: coge 1 división de ese espacio.
+        flex-shrink: 1;
+        flex-basis: auto; 
+    */
+    flex: 1; /* 1 1 auto */
+
+    position: relative; /* Para poder ubicar dentro de él la imagen, la cual tendrá position: absolute; */
+
+    height: 100%; /* El 100% de la altura de su contenedor padre: ".container" */
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    color: #fff;
+
+    transition: .6s;
+}
+
+.container .col:nth-child(1) {
+    background:coral;
+}
+
+.container .col:nth-child(2) {
+    background:lightskyblue;
+}
+
+.container .col:nth-child(3) {
+    background:limegreen;
+}
+
+
+h2 {
+    font-size: 22px;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+.caption {
+    display: none; /* De momento se oculta el texto y el botón. (No el título) */
+
+    max-width: 230px;
+
+    margin: 28px 0;
+
+    font-size: 12px;
+}
+
+.caption button {
+    margin-top: 20px;
+
+    padding: 8px 18px;
+
+    border: 1px solid #fff;
+    border-radius: 30px;
+
+    outline: none;
+
+    font-size: 12px;
+
+    background: transparent;
+    color: #fff;
+
+    cursor: pointer;
+}
+
+
+.container .col img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 200px;
+}
+
+.container .col:hover {
+    flex-grow: 2.5;
+}
+
+.container .col:hover .caption {
+    display: block;
+}
+
+.container .col:hover h2 {
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
